@@ -2,7 +2,7 @@ import AppKit
 
 // MARK: - Language Definition
 
-public struct LangDef {
+public struct LangDef: @unchecked Sendable {
     public let keywords: Set<String>
     public let declKeywords: Set<String>
     public let types: Set<String>

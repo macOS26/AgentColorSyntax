@@ -6,22 +6,22 @@ extension CodeBlockHighlighter {
 
     // Path segment colors for multi-color file path highlighting
     public static var pathHome: NSColor {
-        NSApp.effectiveAppearance.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
+        CodeBlockTheme.isDark
             ? NSColor(red: 0.5, green: 0.5, blue: 0.55, alpha: 1)   // dim gray
             : NSColor(red: 0.45, green: 0.45, blue: 0.5, alpha: 1)
     }
     public static var pathTopDir: NSColor {
-        NSApp.effectiveAppearance.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
+        CodeBlockTheme.isDark
             ? NSColor(red: 0.6, green: 0.75, blue: 0.55, alpha: 1)  // muted green
             : NSColor(red: 0.3, green: 0.5, blue: 0.25, alpha: 1)
     }
     public static var pathMiddle: NSColor {
-        NSApp.effectiveAppearance.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
+        CodeBlockTheme.isDark
             ? NSColor(red: 0.816, green: 0.659, blue: 1.0, alpha: 1)  // lavender
             : NSColor(red: 0.4, green: 0.2, blue: 0.7, alpha: 1)
     }
     public static var pathFilename: NSColor {
-        NSApp.effectiveAppearance.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
+        CodeBlockTheme.isDark
             ? NSColor(red: 0.35, green: 0.7, blue: 1.0, alpha: 1)   // bright blue
             : NSColor(red: 0.0, green: 0.3, blue: 0.8, alpha: 1)
     }

@@ -2,10 +2,15 @@ import AppKit
 
 // MARK: - Code Block Theme (Xcode Dark/Light palette from JibberJabber)
 
-@MainActor public enum CodeBlockTheme {
-    private static var isDark: Bool {
-        NSApp.effectiveAppearance.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
+public enum CodeBlockTheme: Sendable {
+    private nonisolated(unsafe) static var _isDark: Bool = false
+
+    /// Call from main thread on launch and appearance changes to cache dark mode state.
+    @MainActor public static func updateAppearance() {
+        _isDark = NSApp.effectiveAppearance.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
     }
+
+    public static var isDark: Bool { _isDark }
 
     private static func c(_ d: UInt32, _ l: UInt32) -> NSColor {
         let h = isDark ? d : l

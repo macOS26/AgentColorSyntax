@@ -11,7 +11,7 @@ extension CodeBlockHighlighter {
         let result = NSMutableAttributedString(string: code, attributes: [
             .font: font, .foregroundColor: text
         ])
-        let isDark = NSApp.effectiveAppearance.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
+        let isDark = CodeBlockTheme.isDark
 
         let removedBg = isDark
             ? NSColor(red: 0.4, green: 0.1, blue: 0.1, alpha: 1.0)    // dark red

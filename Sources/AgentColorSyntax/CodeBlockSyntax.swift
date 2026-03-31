@@ -2,7 +2,7 @@ import AppKit
 
 // MARK: - Highlighter
 
-@MainActor public enum CodeBlockHighlighter {
+public enum CodeBlockHighlighter: Sendable {
     private static let wordRx: NSRegularExpression? = try? NSRegularExpression(pattern: #"\b(?:[a-zA-Z][a-zA-Z0-9_]*|_[a-zA-Z0-9][a-zA-Z0-9_]*)\b"#)
     private static let funcRx: NSRegularExpression? = try? NSRegularExpression(pattern: #"\b([a-zA-Z_][a-zA-Z0-9_]*)\s*(?=\()"#)
     private static let propRx: NSRegularExpression? = try? NSRegularExpression(pattern: #"\.([a-zA-Z_][a-zA-Z0-9_]*)"#)
@@ -516,42 +516,42 @@ import AppKit
 
     // Terminal output theme colors
     private static var termDir: NSColor {
-        NSApp.effectiveAppearance.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
+        CodeBlockTheme.isDark
             ? NSColor(red: 0.35, green: 0.7, blue: 1.0, alpha: 1)   // bright blue
             : NSColor(red: 0.0, green: 0.3, blue: 0.8, alpha: 1)
     }
     private static var termExec: NSColor {
-        NSApp.effectiveAppearance.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
+        CodeBlockTheme.isDark
             ? NSColor(red: 0.4, green: 0.9, blue: 0.4, alpha: 1)    // green
             : NSColor(red: 0.0, green: 0.5, blue: 0.0, alpha: 1)
     }
     private static var termSymlink: NSColor {
-        NSApp.effectiveAppearance.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
+        CodeBlockTheme.isDark
             ? NSColor(red: 0.9, green: 0.5, blue: 0.9, alpha: 1)    // magenta
             : NSColor(red: 0.6, green: 0.0, blue: 0.6, alpha: 1)
     }
     private static var termSize: NSColor {
-        NSApp.effectiveAppearance.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
+        CodeBlockTheme.isDark
             ? NSColor(red: 0.85, green: 0.85, blue: 0.5, alpha: 1)  // yellow
             : NSColor(red: 0.5, green: 0.4, blue: 0.0, alpha: 1)
     }
     private static var termDate: NSColor {
-        NSApp.effectiveAppearance.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
+        CodeBlockTheme.isDark
             ? NSColor(red: 0.6, green: 0.6, blue: 0.7, alpha: 1)    // dim
             : NSColor(red: 0.4, green: 0.4, blue: 0.5, alpha: 1)
     }
     private static var termPerm: NSColor {
-        NSApp.effectiveAppearance.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
+        CodeBlockTheme.isDark
             ? NSColor(red: 0.6, green: 0.7, blue: 0.6, alpha: 1)    // muted green
             : NSColor(red: 0.3, green: 0.4, blue: 0.3, alpha: 1)
     }
     private static var termPath: NSColor {
-        NSApp.effectiveAppearance.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
+        CodeBlockTheme.isDark
             ? NSColor(red: 0.4, green: 0.85, blue: 0.85, alpha: 1)  // cyan
             : NSColor(red: 0.0, green: 0.5, blue: 0.5, alpha: 1)
     }
     private static var termError: NSColor {
-        NSApp.effectiveAppearance.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
+        CodeBlockTheme.isDark
             ? NSColor(red: 1.0, green: 0.4, blue: 0.4, alpha: 1)    // red
             : NSColor(red: 0.8, green: 0.0, blue: 0.0, alpha: 1)
     }
@@ -565,7 +565,7 @@ import AppKit
     private static let termErrorRx: NSRegularExpression? = try? NSRegularExpression(pattern: #"\b(?:error|Error|ERROR|fatal|FATAL|failed|FAILED|No such file|Permission denied|not found|cannot)\b"#)
     private static let termWarningRx: NSRegularExpression? = try? NSRegularExpression(pattern: #"\b(?:warning|Warning|WARNING|deprecated|DEPRECATED|caution)\b"#)
     private static var termWarning: NSColor {
-        NSApp.effectiveAppearance.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
+        CodeBlockTheme.isDark
             ? NSColor(red: 1.0, green: 0.8, blue: 0.2, alpha: 1)    // yellow
             : NSColor(red: 0.7, green: 0.5, blue: 0.0, alpha: 1)
     }
@@ -655,7 +655,7 @@ import AppKit
 
     /// Highlight a D1F diff line: background stripe for the diff marker, code syntax for the text.
     private static func highlightD1FLine(line: String, font: NSFont) -> NSAttributedString {
-        let isDark = NSApp.effectiveAppearance.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
+        let isDark = CodeBlockTheme.isDark
         let trimmed = line.trimmingCharacters(in: .whitespaces)
 
         // Strip emoji prefix to get the code content for syntax highlighting
