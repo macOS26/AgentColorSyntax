@@ -1,0 +1,310 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.AgentColorSyntax-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/sources",
+      "importPath" : "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockLangDef.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockSyntax+Diff.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockSyntax+LanguageResolution.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockSyntax+PathColor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockSyntax.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockTheme.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "AgentColorSyntax",
+      "moduleOutputPath" : "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/Modules/AgentColorSyntax.swiftmodule",
+      "objects" : [
+        "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockLangDef.swift.o",
+        "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockSyntax+Diff.swift.o",
+        "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockSyntax+LanguageResolution.swift.o",
+        "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockSyntax+PathColor.swift.o",
+        "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockSyntax.swift.o",
+        "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockTheme.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx15.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/include/AgentColorSyntax-Swift.h",
+        "-swift-version",
+        "6",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "agentcolorsyntax"
+      ],
+      "outputFileMapPath" : "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockLangDef.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockSyntax+Diff.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockSyntax+LanguageResolution.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockSyntax+PathColor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockSyntax.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockTheme.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/Modules/AgentColorSyntax.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockLangDef.swift",
+        "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockSyntax+Diff.swift",
+        "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockSyntax+LanguageResolution.swift",
+        "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockSyntax+PathColor.swift",
+        "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockSyntax.swift",
+        "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockTheme.swift"
+      ],
+      "tempsPath" : "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "AgentColorSyntax" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "AgentColorSyntax",
+      "-package-name",
+      "agentcolorsyntax",
+      "-c",
+      "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockLangDef.swift",
+      "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockSyntax+Diff.swift",
+      "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockSyntax+LanguageResolution.swift",
+      "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockSyntax+PathColor.swift",
+      "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockSyntax.swift",
+      "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockTheme.swift",
+      "-I",
+      "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx15.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/include/AgentColorSyntax-Swift.h",
+      "-swift-version",
+      "6",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "agentcolorsyntax",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "AgentColorSyntax" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockLangDef.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockSyntax+Diff.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockSyntax+LanguageResolution.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockSyntax+PathColor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockSyntax.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockTheme.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/sources"
+    },
+    "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}

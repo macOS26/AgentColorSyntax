@@ -1,0 +1,47 @@
+{
+  "": {
+    "swift-dependencies": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/master.swiftdeps"
+  },
+  "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockLangDef.swift": {
+    "dependencies": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockLangDef.d",
+    "object": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockLangDef.swift.o",
+    "swiftmodule": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockLangDef~partial.swiftmodule",
+    "swift-dependencies": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockLangDef.swiftdeps",
+    "diagnostics": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockLangDef.dia"
+  },
+  "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockSyntax+Diff.swift": {
+    "dependencies": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockSyntax+Diff.d",
+    "object": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockSyntax+Diff.swift.o",
+    "swiftmodule": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockSyntax+Diff~partial.swiftmodule",
+    "swift-dependencies": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockSyntax+Diff.swiftdeps",
+    "diagnostics": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockSyntax+Diff.dia"
+  },
+  "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockSyntax+LanguageResolution.swift": {
+    "dependencies": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockSyntax+LanguageResolution.d",
+    "object": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockSyntax+LanguageResolution.swift.o",
+    "swiftmodule": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockSyntax+LanguageResolution~partial.swiftmodule",
+    "swift-dependencies": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockSyntax+LanguageResolution.swiftdeps",
+    "diagnostics": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockSyntax+LanguageResolution.dia"
+  },
+  "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockSyntax+PathColor.swift": {
+    "dependencies": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockSyntax+PathColor.d",
+    "object": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockSyntax+PathColor.swift.o",
+    "swiftmodule": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockSyntax+PathColor~partial.swiftmodule",
+    "swift-dependencies": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockSyntax+PathColor.swiftdeps",
+    "diagnostics": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockSyntax+PathColor.dia"
+  },
+  "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockSyntax.swift": {
+    "dependencies": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockSyntax.d",
+    "object": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockSyntax.swift.o",
+    "swiftmodule": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockSyntax~partial.swiftmodule",
+    "swift-dependencies": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockSyntax.swiftdeps",
+    "diagnostics": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockSyntax.dia"
+  },
+  "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/Sources/AgentColorSyntax/CodeBlockTheme.swift": {
+    "dependencies": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockTheme.d",
+    "object": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockTheme.swift.o",
+    "swiftmodule": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockTheme~partial.swiftmodule",
+    "swift-dependencies": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockTheme.swiftdeps",
+    "diagnostics": "/Users/toddbruss/Documents/GitHub/Agent/AgentColorSyntax/.build/arm64-apple-macosx/debug/AgentColorSyntax.build/CodeBlockTheme.dia"
+  }
+}
