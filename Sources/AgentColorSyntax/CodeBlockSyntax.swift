@@ -658,12 +658,33 @@ public enum CodeBlockHighlighter: Sendable {
         let isDark = CodeBlockTheme.isDark
         let trimmed = line.trimmingCharacters(in: .whitespaces)
 
+        // Separate optional line-number prefix from the emoji+code portion
+        // Formats: "❌ code" or "42 ❌ code"
+        let lineNumber: String?   // e.g. "42"
+        let emojiPart: String     // trimmed text starting at the emoji (e.g. "❌ code")
+
+        if let first = trimmed.first, first.isNumber {
+            let digits = trimmed.prefix(while: { $0.isNumber })
+            let afterDigits = trimmed[digits.endIndex...]
+            if afterDigits.hasPrefix(" "),
+               d1fEmojis.contains(where: { afterDigits.dropFirst().hasPrefix($0) }) {
+                lineNumber = String(digits)
+                emojiPart = String(afterDigits.dropFirst()) // drop the space between number and emoji
+            } else {
+                lineNumber = nil
+                emojiPart = trimmed
+            }
+        } else {
+            lineNumber = nil
+            emojiPart = trimmed
+        }
+
         // Strip emoji prefix to get the code content for syntax highlighting
         let codeContent: String
-        if let spaceIdx = trimmed.firstIndex(of: " "), trimmed.distance(from: trimmed.startIndex, to: spaceIdx) <= 2 {
-            codeContent = String(trimmed[trimmed.index(after: spaceIdx)...])
+        if let spaceIdx = emojiPart.firstIndex(of: " "), emojiPart.distance(from: emojiPart.startIndex, to: spaceIdx) <= 2 {
+            codeContent = String(emojiPart[emojiPart.index(after: spaceIdx)...])
         } else {
-            codeContent = trimmed
+            codeContent = emojiPart
         }
 
         // Apply code syntax highlighting to the content portion
@@ -671,10 +692,19 @@ public enum CodeBlockHighlighter: Sendable {
         let guessedLang = guessLanguage(from: codeContent) ?? "swift"
         let syntaxHighlighted = highlight(code: codeContent, language: guessedLang, font: font)
 
-        // Build the full line: emoji prefix + syntax-highlighted code
+        // Build the full line: [number] emoji prefix + syntax-highlighted code
         let result = NSMutableAttributedString(string: line, attributes: [
             .font: font, .foregroundColor: NSColor.labelColor
         ])
+
+        // Color the line number in a subtle gutter style
+        if let num = lineNumber, let numRange = line.range(of: num) {
+            let nsNumRange = NSRange(numRange, in: line)
+            let gutterColor = isDark
+                ? NSColor(white: 0.45, alpha: 1.0)
+                : NSColor(white: 0.50, alpha: 1.0)
+            result.addAttribute(.foregroundColor, value: gutterColor, range: nsNumRange)
+        }
 
         // Find where the code content starts in the original line and overlay syntax colors + bold fonts
         if let contentRange = line.range(of: codeContent) {
@@ -692,17 +722,17 @@ public enum CodeBlockHighlighter: Sendable {
             }
         }
 
-        // Apply background stripe based on D1F marker
+        // Apply background stripe based on D1F marker (use emojiPart which has number stripped)
         let bg: NSColor
-        if trimmed.hasPrefix("❌ ") {
+        if emojiPart.hasPrefix("❌ ") {
             bg = isDark
                 ? NSColor(red: 0.35, green: 0.08, blue: 0.08, alpha: 1.0)
                 : NSColor(red: 0.95, green: 0.80, blue: 0.80, alpha: 1.0)
-        } else if trimmed.hasPrefix("✅ ") {
+        } else if emojiPart.hasPrefix("✅ ") {
             bg = isDark
                 ? NSColor(red: 0.08, green: 0.25, blue: 0.08, alpha: 1.0)
                 : NSColor(red: 0.80, green: 0.95, blue: 0.80, alpha: 1.0)
-        } else if trimmed.hasPrefix("📎 ") {
+        } else if emojiPart.hasPrefix("📎 ") {
             bg = isDark
                 ? NSColor(red: 0.10, green: 0.12, blue: 0.19, alpha: 1.0)
                 : NSColor(red: 0.87, green: 0.89, blue: 0.95, alpha: 1.0)
@@ -786,9 +816,21 @@ public enum CodeBlockHighlighter: Sendable {
     }
 
     /// Check if a line is D1F diff output (📎/❌/✅/📍/📊 prefixed)
+    private static let d1fEmojis: [String] = ["📎 ", "❌ ", "✅ ", "📍 ", "📊 ", "❓ "]
+
     private static func looksLikeD1FLine(_ t: String) -> Bool {
-        t.hasPrefix("📎 ") || t.hasPrefix("❌ ") || t.hasPrefix("✅ ") ||
-        t.hasPrefix("📍 ") || t.hasPrefix("📊 ") || t.hasPrefix("❓ ")
+        // Direct emoji prefix: "❌ code"
+        if d1fEmojis.contains(where: { t.hasPrefix($0) }) { return true }
+        // Numbered prefix: "42 ❌ code"
+        if let first = t.first, first.isNumber {
+            // Strip leading digits and one space
+            let rest = t.drop(while: { $0.isNumber })
+            if rest.hasPrefix(" ") {
+                let afterNum = rest.dropFirst() // drop the space
+                if d1fEmojis.contains(where: { afterNum.hasPrefix($0) }) { return true }
+            }
+        }
+        return false
     }
 
     /// Check if a single line looks like ls -la output (permissions string)
